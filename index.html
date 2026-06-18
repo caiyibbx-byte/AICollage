@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广州城市理工学院人工智能产业学院首届学员招生</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "微软雅黑", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .article-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0 0 40px;
+  }
+  .hero-banner {
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 40%, #1976d2 70%, #00acc1 100%);
+    padding: 48px 32px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  .hero-title {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .hero-title span { color: #ffd54f; }
+  .hero-subtitle {
+    color: rgba(255,255,255,0.88);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .hero-divider {
+    width: 48px; height: 3px;
+    background: #ffd54f;
+    margin: 16px auto 0;
+    border-radius: 2px;
+  }
+  .follow-bar {
+    background: #f0f7ff;
+    border-top: 3px solid #1565c0;
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #1565c0;
+    letter-spacing: 1px;
+  }
+  .part-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 28px 24px 8px;
+    gap: 12px;
+  }
+  .part-label { display: inline-flex; align-items: center; }
+  .part-label .p-big {
+    background: #1565c0; color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 3px 6px 3px 8px;
+  }
+  .part-label .p-small {
+    background: #1976d2; color: #fff;
+    font-size: 11px; padding: 3px 8px 3px 4px;
+    font-style: italic;
+  }
+  .part-title {
+    font-size: 17px; font-weight: 700;
+    color: #1565c0; letter-spacing: 2px;
+  }
+  .part-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(to left, #1565c0, #e8f0fe);
+    margin-left: 8px;
+  }
+  .content-card {
+    margin: 0 16px 16px;
+    background: #fff;
+    border: 1px solid #e3eaf5;
+    border-radius: 6px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.06);
+  }
+  .college-brand {
+    margin: 0 16px 16px;
+    background: linear-gradient(135deg, #e8f0fe 0%, #f0f8ff 100%);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #c5d8f6;
+  }
+  .college-brand .brand-icon { font-size: 48px; margin-bottom: 8px; }
+  .college-brand .brand-name {
+    font-size: 22px; font-weight: 700;
+    color: #0d47a1; letter-spacing: 2px; margin-bottom: 4px;
+  }
+  .college-brand .brand-en {
+    font-size: 12px; color: #5c85c8; letter-spacing: 2px;
+  }
+  .content-card p {
+    text-indent: 2em; margin-bottom: 10px;
+    color: #444; line-height: 2;
+  }
+  .content-card p:last-child { margin-bottom: 0; }
+  .partner-card {
+    margin: 0 16px 16px;
+    background: linear-gradient(135deg, #1a237e 0%, #1565c0 100%);
+    border-radius: 8px;
+    padding: 20px 24px;
+    color: #fff;
+  }
+  .partner-card .pc-title {
+    font-size: 15px; font-weight: 700;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .partner-card .pc-title::before {
+    content: '';
+    display: block;
+    width: 4px; height: 16px;
+    background: #ffd54f;
+    border-radius: 2px;
+  }
+  .partner-card p {
+    font-size: 13.5px; line-height: 1.85;
+    color: rgba(255,255,255,0.9);
+    text-indent: 0;
+    margin-bottom: 0;
+  }
+  /* 合作企业标签列表 */
+  .partner-tags {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px;
+  }
+  .partner-tag {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .section-title {
+    background: #e8f0fe; color: #1565c0;
+    font-weight: 700; font-size: 14.5px;
+    padding: 7px 14px;
+    border-left: 4px solid #1565c0;
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+  }
+  .content-card ul, .content-card ol {
+    padding-left: 0; list-style: none; margin-bottom: 8px;
+  }
+  .content-card li {
+    padding: 3px 0; color: #444;
+    line-height: 1.85; display: flex; gap: 8px;
+  }
+  .content-card li .li-num {
+    color: #1565c0; font-weight: 700;
+    min-width: 24px; flex-shrink: 0;
+  }
+  .content-card li b { color: #1a237e; }
+  .direction-block {
+    margin-bottom: 18px;
+    border: 1px solid #c5d8f6;
+    border-radius: 6px; overflow: hidden;
+  }
+  .direction-block:last-child { margin-bottom: 0; }
+  .direction-header {
+    background: linear-gradient(90deg, #1565c0, #1976d2);
+    color: #fff; padding: 10px 16px;
+    font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .direction-header .dir-num {
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; flex-shrink: 0;
+  }
+  .direction-body { padding: 14px 16px; background: #f8fbff; }
+  .direction-body .dir-row {
+    display: flex; gap: 8px;
+    margin-bottom: 6px; font-size: 14px;
+  }
+  .direction-body .dir-row:last-child { margin-bottom: 0; }
+  .dir-label {
+    color: #1565c0; font-weight: 600;
+    white-space: nowrap; min-width: 70px; flex-shrink: 0;
+  }
+  .dir-content { color: #444; line-height: 1.75; }
+  .module-card {
+    border: 1px solid #c5d8f6;
+    border-radius: 8px; overflow: hidden; margin-bottom: 14px;
+  }
+  .module-card:last-child { margin-bottom: 0; }
+  .module-header {
+    padding: 11px 16px; font-weight: 700;
+    font-size: 15px; color: #fff;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .module-header.m1 { background: linear-gradient(90deg, #1565c0, #1976d2); }
+  .module-header.m2 { background: linear-gradient(90deg, #00838f, #0097a7); }
+  .module-header.m3 { background: linear-gradient(90deg, #558b2f, #689f38); }
+  .module-header.m4 { background: linear-gradient(90deg, #6a1b9a, #8e24aa); }
+  .module-header.m5 { background: linear-gradient(90deg, #c62828, #e53935); }
+  .module-header .m-icon { font-size: 18px; }
+  .module-body { padding: 12px 16px; background: #fafcff; }
+  .module-body .m-row {
+    display: flex; gap: 8px;
+    margin-bottom: 5px; font-size: 13.5px;
+  }
+  .module-body .m-row:last-child { margin-bottom: 0; }
+  .m-label {
+    color: #1565c0; font-weight: 600;
+    white-space: nowrap; min-width: 60px; flex-shrink: 0;
+  }
+  .m-content { color: #444; line-height: 1.75; }
+  .teacher-mode {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; margin: 12px 0;
+  }
+  .teacher-item {
+    background: linear-gradient(135deg, #e8f0fe, #f5f9ff);
+    border: 1px solid #c5d8f6;
+    border-radius: 8px; padding: 14px 10px; text-align: center;
+  }
+  .teacher-item .t-icon { font-size: 28px; margin-bottom: 6px; }
+  .teacher-item .t-name {
+    font-size: 13px; font-weight: 700; color: #1565c0; margin-bottom: 4px;
+  }
+  .teacher-item .t-desc { font-size: 12px; color: #666; line-height: 1.6; }
+  .timeline { position: relative; padding-left: 28px; margin-top: 8px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, #1565c0, #bbdefb);
+  }
+  .tl-item { position: relative; margin-bottom: 18px; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-dot {
+    position: absolute; left: -22px; top: 3px;
+    width: 14px; height: 14px;
+    background: #1565c0; border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #1565c0;
+  }
+  .tl-title { font-weight: 700; color: #1565c0; font-size: 15px; margin-bottom: 6px; }
+  .tl-body { font-size: 13.5px; color: #555; line-height: 1.85; }
+  .tl-body p { margin-bottom: 3px; }
+  .contact-box {
+    background: #f0f7ff; border: 1px solid #c5d8f6;
+    border-radius: 8px; padding: 16px 20px; margin-top: 12px;
+  }
+  .contact-box .ct-row {
+    display: flex; align-items: center;
+    gap: 10px; margin-bottom: 8px; font-size: 14px;
+  }
+  .contact-box .ct-row:last-child { margin-bottom: 0; }
+  .ct-icon { font-size: 18px; }
+  .ct-label { color: #666; min-width: 70px; }
+  .ct-val { color: #1565c0; font-weight: 600; }
+  .path-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin-top: 8px;
+  }
+  .path-item {
+    background: linear-gradient(135deg, #e8f0fe, #f5f9ff);
+    border-left: 4px solid #1565c0;
+    border-radius: 0 6px 6px 0; padding: 12px 14px;
+  }
+  .path-item .p-title {
+    font-weight: 700; color: #1565c0; font-size: 14px;
+    margin-bottom: 5px; display: flex; align-items: center; gap: 6px;
+  }
+  .path-item .p-desc { font-size: 12.5px; color: #555; line-height: 1.7; }
+  .rule-list { margin-top: 8px; }
+  .rule-item {
+    display: flex; gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px dashed #e0ecf8; font-size: 14px;
+  }
+  .rule-item:last-child { border-bottom: none; }
+  .rule-num {
+    background: #1565c0; color: #fff;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  }
+  .rule-text { color: #444; line-height: 1.8; }
+  .rule-text b { color: #1a237e; }
+  .appendix-list { margin-top: 8px; }
+  .appendix-item {
+    padding: 6px 0; font-size: 13.5px; color: #666;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex; gap: 8px;
+  }
+  .appendix-item:last-child { border-bottom: none; }
+  .appendix-item .a-num { color: #999; min-width: 20px; }
+  .footer-info {
+    margin: 0 16px; padding: 16px;
+    border-top: 1px solid #e8f0fe;
+    text-align: center; font-size: 12px; color: #999; line-height: 2;
+  }
+  .footer-info .f-school {
+    font-size: 14px; color: #1565c0; font-weight: 700; margin-bottom: 4px;
+  }
+  .highlight { color: #1565c0; font-weight: 700; }
+  @media (max-width: 480px) {
+    .path-grid { grid-template-columns: 1fr; }
+    .teacher-mode { grid-template-columns: 1fr; }
+    .hero-title { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="article-wrap">
+
+  <!-- 顶部Banner -->
+  <div class="hero-banner">
+    <div class="hero-tag">产教融合 · 智创未来</div>
+    <div class="hero-title">广州城市理工学院<br><span>人工智能产业学院</span><br>首届学员火热招生中！</div>
+    <div class="hero-subtitle">麒麟软件 · 龙芯中科 · 盖特软件 · 广东派宝机器人等企业 联合共建</div>
+    <div class="hero-divider"></div>
+  </div>
+
+  <div class="follow-bar">↑ 点击蓝字，轻松关注 | 广州城市理工学院人工智能产业学院</div>
+
+  <!-- ===== Part 01 学院简介 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/01</span></div>
+    <span class="part-title">学院简介</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="college-brand">
+    <div class="brand-icon">🤖</div>
+    <div class="brand-name">广州城市理工学院 · 人工智能产业学院</div>
+    <div class="brand-en">GCUT AI INDUSTRY COLLEGE</div>
+  </div>
+
+  <div class="content-card">
+    <p>人工智能产业学院是广州城市理工学院响应国家人工智能发展战略，深度融合人工智能技术与产业应用打造的新型产教融合平台。学院立足粤港澳大湾区数字经济与智能产业发展需求，联合麒麟软件、龙芯中科、盖特软件、广东派宝机器人等头部企业深度开展产学研合作，引入企业完整的技术链、项目链与服务链，推行双导师制、项目化教学，打通校园学习、岗位实训、高质量就业全链条。</p>
+    <p>学院打破传统专业壁垒，依托五大核心方向构建"技术研发—场景应用—运营管理—创新创业"全产业链培养体系，面向企业数智化运营、智慧城市、国产芯片、信创生态、无人自主系统等战略性新兴领域，培养具备AI思维、工程能力与行业洞察力的高素质复合型人才，致力于打造粤港澳大湾区AI人才高地与产业发展引擎。</p>
+  </div>
+
+  <div class="partner-card">
+    <div class="pc-title">核心合作企业</div>
+    <p>学院联合国产软硬件与智能技术领域头部企业，共同构建产教融合生态，为学员提供真实项目资源、企业导师与就业通道。</p>
+    <div class="partner-tags">
+      <span class="partner-tag">麒麟软件有限公司</span>
+      <span class="partner-tag">龙芯中科技术股份有限公司</span>
+      <span class="partner-tag">盖特软件</span>
+      <span class="partner-tag">广东派宝机器人有限公司</span>
+      <span class="partner-tag">等</span>
+    </div>
+  </div>
+
+  <!-- ===== Part 02 招生总体说明 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/02</span></div>
+    <span class="part-title">招生总体说明</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="section-title">01 / 招生宗旨</div>
+    <p>坚持产业导向、精准分流、分类培养原则，结合人工智能技术发展趋势与行业岗位需求，匹配不同专业学生特长，补齐单一专业技能短板，深化产教融合，为企业数字化运营、智慧城市建设、国产芯片应用、信创生态开发、无人自主系统等领域输送复合型AI专业人才。</p>
+
+    <div class="section-title" style="margin-top:16px;">02 / 招生对象</div>
+    <p>本次面向广州城市理工学院<span class="highlight">全体大二在读本科生</span>，无专业、文理类别限制，欢迎所有对人工智能感兴趣的同学报名参与。</p>
+
+    <div class="section-title" style="margin-top:16px;">03 / 报名基本条件</div>
+    <ul style="margin-top:4px;">
+      <li><span class="li-num">1、</span><div>热爱人工智能及相关产业，学习态度端正，自律性强，具备良好的自主学习与动手实践能力；</div></li>
+      <li><span class="li-num">2、</span><div>积极参与课程学习、项目实训、企业实践，服从产业学院教学、实训及日常管理规定；</div></li>
+      <li><span class="li-num">3、</span><div>遵守校纪校规，无违纪记录，能够保证全程参与培养、实训及考核；</div></li>
+      <li><span class="li-num">4、</span><div>具备基本编程基础（Python / C / Java 之一）者优先，无基础但有强烈学习意愿者同等欢迎报名。</div></li>
+    </ul>
+  </div>
+
+  <!-- ===== Part 03 五大培养方向 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/03</span></div>
+    <span class="part-title">五大培养方向</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <p style="margin-bottom:14px;">结合专业属性与行业岗位，设置五大差异化培养方向，所有课程均可执行<span class="highlight">学分置换</span>，不影响学生本专业正常学业。</p>
+
+    <div class="direction-block">
+      <div class="direction-header">
+        <div class="dir-num">01</div>企业数智化运营方向
+      </div>
+      <div class="direction-body">
+        <div class="dir-row"><span class="dir-label">培养目标</span><span class="dir-content">掌握AI驱动的企业数字化转型方法论，能够运用大模型、RPA、数据分析等工具进行业务流程优化与智能决策支持，培养具备"业务+AI"双重能力的数智化运营人才</span></div>
+        <div class="dir-row"><span class="dir-label">核心课程</span><span class="dir-content">制造业数字化认知与业务建模、企业数据工程与AI服务产品、智能排产与生产过程数字化、供应链协同与质量智能检测、设计数字化与客户协同平台、企业云服务技术与运维、模型训练和调优</span></div>
+        <div class="dir-row"><span class="dir-label">适配岗位</span><span class="dir-content">AI产品经理、数字化转型顾问、智能运营专员、大模型应用开发工程师</span></div>
+      </div>
+    </div>
+
+    <div class="direction-block">
+      <div class="direction-header" style="background:linear-gradient(90deg,#00838f,#0097a7);">
+        <div class="dir-num" style="background:rgba(255,255,255,0.2);">02</div>智慧城市与数智化服务方向
+      </div>
+      <div class="direction-body">
+        <div class="dir-row"><span class="dir-label">培养目标</span><span class="dir-content">面向政务数字化、智慧园区、智慧交通、公共安全等城市级AI应用场景，培养能够参与政府数字化项目建设、智慧城市解决方案设计与交付的复合型工程人才</span></div>
+        <div class="dir-row"><span class="dir-label">核心课程</span><span class="dir-content">智能体与OPC实践、无人自主系统与实践、模型训练和调优；场景方向（6选2）：智慧教育平台与实施、家政服务数智化管理、楼宇智能化系统与应用、农业数智化技术与应用、文旅数智化应用、城市数据工程与AI应用；视听方向（2选1）：智能视听系统基础、视听方案设计与工程表达</span></div>
+        <div class="dir-row"><span class="dir-label">适配岗位</span><span class="dir-content">智慧城市解决方案工程师、AI系统集成工程师、政务信息化项目专员、数字孪生开发工程师</span></div>
+      </div>
+    </div>
+
+    <div class="direction-block">
+      <div class="direction-header" style="background:linear-gradient(90deg,#4527a0,#5e35b1);">
+        <div class="dir-num" style="background:rgba(255,255,255,0.2);">03</div>龙芯芯片设计与应用开发方向
+      </div>
+      <div class="direction-body">
+        <div class="dir-row"><span class="dir-label">培养目标</span><span class="dir-content">聚焦国产LoongArch架构芯片平台，培养具备国产处理器底层开发、嵌入式系统移植与AI推理部署能力的工程人才，服务国家芯片自主可控战略</span></div>
+        <div class="dir-row"><span class="dir-label">核心课程</span><span class="dir-content">硬件描述语言与数字系统设计、汇编语言、EDA技术、LoongArch体系结构与系统优化、编译技术与代码适配、智能硬件设计与应用开发</span></div>
+        <div class="dir-row"><span class="dir-label">适配岗位</span><span class="dir-content">国产芯片应用开发工程师、嵌入式系统工程师、底层软件工程师、AI推理优化工程师</span></div>
+      </div>
+    </div>
+
+    <div class="direction-block">
+      <div class="direction-header" style="background:linear-gradient(90deg,#558b2f,#689f38);">
+        <div class="dir-num" style="background:rgba(255,255,255,0.2);">04</div>麒麟开源社区开发与信创方向
+      </div>
+      <div class="direction-body">
+        <div class="dir-row"><span class="dir-label">培养目标</span><span class="dir-content">围绕国产操作系统麒麟（Kylin OS）生态，培养能够承担国产软硬件适配、信创平台应用开发与社区贡献的实战型开发人才，服务党政军企信创替代工程</span></div>
+        <div class="dir-row"><span class="dir-label">核心课程</span><span class="dir-content">Linux内核开发与社区实践、Linux系统原理与麒麟OS架构、麒麟平台系统服务与安全加固、编译技术与应用适配、基于麒麟操作系统的智能系统开发、麒麟平台应用开发</span></div>
+        <div class="dir-row"><span class="dir-label">适配岗位</span><span class="dir-content">信创系统工程师、国产软件适配工程师、开源社区开发者、Linux运维工程师</span></div>
+      </div>
+    </div>
+
+    <div class="direction-block">
+      <div class="direction-header" style="background:linear-gradient(90deg,#bf360c,#e64a19);">
+        <div class="dir-num" style="background:rgba(255,255,255,0.2);">05</div>无人自主技术方向
+      </div>
+      <div class="direction-body">
+        <div class="dir-row"><span class="dir-label">培养目标</span><span class="dir-content">面向无人机、无人车、机器人等无人自主系统领域，培养具备感知算法、运动规划、嵌入式控制与ROS2开发能力的复合型自主系统工程人才</span></div>
+        <div class="dir-row"><span class="dir-label">核心课程</span><span class="dir-content">机器人综合基础、无人系统算法、自动器调度管理平台技术、具身智能与大模型技术、无人应用开发</span></div>
+        <div class="dir-row"><span class="dir-label">适配岗位</span><span class="dir-content">无人机/无人车算法工程师、机器人系统开发工程师、自主感知工程师、ROS2开发工程师</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Part 04 五大核心培养板块 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/04</span></div>
+    <span class="part-title">五大核心培养板块</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <p style="margin-bottom:14px;">学院构建"AI基础—技术深化—行业应用—项目实战"四层课程体系，覆盖从算法理论到工程落地的全流程，理论与实战深度融合。</p>
+
+    <div class="module-card">
+      <div class="module-header m1"><span class="m-icon">🧠</span> 01 AI基础与大模型应用板块</div>
+      <div class="module-body">
+        <div class="m-row"><span class="m-label">培养方向</span><span class="m-content">Python编程、机器学习基础、深度学习、大模型原理与调用、Prompt工程</span></div>
+        <div class="m-row"><span class="m-label">实训内容</span><span class="m-content">HuggingFace模型调用实战、RAG系统搭建、LangChain/LangGraph多智能体开发</span></div>
+        <div class="m-row"><span class="m-label">适配岗位</span><span class="m-content">AI工程师、大模型应用开发工程师、AI产品经理</span></div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header m2"><span class="m-icon">🏙️</span> 02 智能系统与行业落地板块</div>
+      <div class="module-body">
+        <div class="m-row"><span class="m-label">培养方向</span><span class="m-content">计算机视觉、视频智能分析、物联网数据处理、行业AI方案设计</span></div>
+        <div class="m-row"><span class="m-label">实训内容</span><span class="m-content">YOLO目标检测部署、视频智能分析系统实操、智慧城市AI项目实训</span></div>
+        <div class="m-row"><span class="m-label">适配岗位</span><span class="m-content">AI系统集成工程师、算法工程师、行业AI解决方案工程师</span></div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header m3"><span class="m-icon">🔧</span> 03 国产软硬件与信创板块</div>
+      <div class="module-body">
+        <div class="m-row"><span class="m-label">培养方向</span><span class="m-content">LoongArch架构开发、麒麟OS应用、国产数据库、信创软件适配与迁移</span></div>
+        <div class="m-row"><span class="m-label">实训内容</span><span class="m-content">龙芯开发板实战、麒麟OS上的AI应用开发、国产数据库实操、国产中间件适配</span></div>
+        <div class="m-row"><span class="m-label">适配岗位</span><span class="m-content">信创工程师、嵌入式开发工程师、国产软件适配工程师</span></div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header m4"><span class="m-icon">🤖</span> 04 无人自主系统板块</div>
+      <div class="module-body">
+        <div class="m-row"><span class="m-label">培养方向</span><span class="m-content">ROS2开发、SLAM导航、飞控系统、强化学习与运动规划</span></div>
+        <div class="m-row"><span class="m-label">实训内容</span><span class="m-content">无人机仿真（Gazebo/PX4）、自主导航算法调试、机械臂控制实验、多机协同任务规划</span></div>
+        <div class="m-row"><span class="m-label">适配岗位</span><span class="m-content">机器人开发工程师、无人系统工程师、ROS2工程师</span></div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header m5"><span class="m-icon">📊</span> 05 数字化运营与项目管理板块</div>
+      <div class="module-body">
+        <div class="m-row"><span class="m-label">培养方向</span><span class="m-content">AI项目管理、数据驱动运营、招投标与标书撰写、企业数字化咨询</span></div>
+        <div class="m-row"><span class="m-label">实训内容</span><span class="m-content">真实企业AI项目全流程参与、招投标文件撰写实练、数字化方案路演、企业数字化诊断报告</span></div>
+        <div class="m-row"><span class="m-label">适配岗位</span><span class="m-content">AI项目经理、数字化咨询顾问、招投标专员、企业数字化运营专员</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Part 05 师资团队与授课方式 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/05</span></div>
+    <span class="part-title">师资团队与授课方式</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="section-title">01 / 三元师资模式</div>
+    <div class="teacher-mode">
+      <div class="teacher-item">
+        <div class="t-icon">🎓</div>
+        <div class="t-name">校内专业教师</div>
+        <div class="t-desc">AI、计算机、电子信息领域专任教师及科研团队，理论功底深厚</div>
+      </div>
+      <div class="teacher-item">
+        <div class="t-icon">🏭</div>
+        <div class="t-name">企业技术导师</div>
+        <div class="t-desc">来自麒麟、龙芯、盖特、派宝等合作企业的资深工程师与项目总监</div>
+      </div>
+      <div class="teacher-item">
+        <div class="t-icon">🌟</div>
+        <div class="t-name">行业专家</div>
+        <div class="t-desc">龙芯、麒麟、无人系统等领域知名专家，不定期开展前沿讲座</div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:16px;">02 / 多元授课方式</div>
+    <ul>
+      <li><span class="li-num">1、</span><div><b>校内课堂：</b>理论讲解、代码实操、案例分析、算法研讨，学用一体</div></li>
+      <li><span class="li-num">2、</span><div><b>企业实训：</b>赴合作企业参与真实项目开发，专项技能训练营、岗位轮岗学习</div></li>
+      <li><span class="li-num">3、</span><div><b>产业现场：</b>赴智慧城市示范基地、无人系统实验室实地教学，沉浸式工程实践</div></li>
+      <li><span class="li-num">4、</span><div><b>线上教学：</b>配套录播课程与技术文档库，支持课后自主巩固与进阶学习</div></li>
+    </ul>
+
+    <div class="section-title" style="margin-top:16px;">03 / 学分管理</div>
+    <p>产业学院所有课程、实训项目均按照学校规定执行<span class="highlight">学分置换</span>，按学年统一核定学时与学分，与学生原有学业体系无缝衔接，不影响正常毕业、升学及考研。</p>
+  </div>
+
+  <!-- ===== Part 06 报名流程与时间安排 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/06</span></div>
+    <span class="part-title">报名流程与时间安排</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">01 报名阶段</div>
+        <div class="tl-body">
+          <p><b>报名截止时间：</b><span class="highlight">2026年6月26日</span></p>
+          <p>填写《人工智能产业学院学生报名信息登记表》（纸质版 + 电子版 + 线上登记）：</p>
+          <p>• 纸质版交至人工智能产业学院办公室（B1-318）</p>
+          <p>• 电子版发送至报名邮箱：<strong>dep-cst@gcu.edu.cn</strong></p>
+          <p>• 或扫描学院官方招生二维码进行线上登记</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-title">02 录取与公示</div>
+        <div class="tl-body">
+          <p>报名截止后，产业学院根据报名志愿与专业背景综合评定，确定录取名单并进行公示；公示无异议后，正式组建首届人工智能产业学院教学班。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <div class="ct-row">
+        <span class="ct-icon">👨‍💼</span>
+        <span class="ct-label">咨询老师</span>
+        <span class="ct-val">赵老师</span>
+      </div>
+      <div class="ct-row">
+        <span class="ct-icon">📱</span>
+        <span class="ct-label">联系电话</span>
+        <span class="ct-val">36903150</span>
+      </div>
+      <div class="ct-row">
+        <span class="ct-icon">📍</span>
+        <span class="ct-label">办公地点</span>
+        <span class="ct-val">广州城市理工学院 人工智能产业学院办公室B1-318</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Part 07 培养模式与发展路径 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/07</span></div>
+    <span class="part-title">培养模式与发展路径</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="path-grid">
+      <div class="path-item">
+        <div class="p-title">🔬 全程实战教学</div>
+        <div class="p-desc">学习期间参与真实企业AI项目，以小组形式协同完成需求分析、开发、测试与交付，积累可展示项目经验</div>
+      </div>
+      <div class="path-item">
+        <div class="p-title">💼 顶岗实习推荐</div>
+        <div class="p-desc">课程与实操考核合格的优秀学员，优先推荐至麒麟、龙芯、派宝等合作企业开展带薪顶岗实习</div>
+      </div>
+      <div class="path-item">
+        <div class="p-title">🎯 就业直通保障</div>
+        <div class="p-desc">综合测评优异的毕业生，合作企业优先录用，实现"教学—实习—就业"无缝衔接，重点推荐大湾区头部AI企业</div>
+      </div>
+      <div class="path-item">
+        <div class="p-title">🚀 多元发展通道</div>
+        <div class="p-desc">可依托项目作品集参与学科竞赛（大创、挑战杯）、考研升学；优秀学员可参与企业技术研讨与行业标准制定工作</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Part 08 管理与考核要求 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/08</span></div>
+    <span class="part-title">管理与考核要求</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="rule-list">
+      
+      <div class="rule-item">
+        <div class="rule-num">1</div>
+        <div class="rule-text"><b>综合考核制度：</b>考核内容包含考勤、专项技术作业、项目实操成果、实训表现、期末综合测评等，考核不合格者取消产业学院学习资格。</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">2</div>
+        <div class="rule-text"><b>纪律要求：</b>全体学员需严格遵守考勤制度，不得迟到、旷课、中途退出，保质保量完成各项学习、开发与实践任务。</div>
+      </div>
+      <div class="rule-item">
+        <div class="rule-num">3</div>
+        <div class="rule-text"><b>荣誉激励：</b>设置优秀学员奖励机制，学期末评选"人工智能产业学院优秀学员"，颁发证书并优先获得企业内推与实习资格。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Part 09 附则 ===== -->
+  <div class="part-header">
+    <div class="part-label"><span class="p-big">P</span><span class="p-small">art/09</span></div>
+    <span class="part-title">附则</span>
+    <div class="part-line"></div>
+  </div>
+
+  <div class="content-card">
+    <div class="appendix-list">
+      <div class="appendix-item">
+        <span class="a-num">1、</span>
+        <span>本方案由广州城市理工学院人工智能产业学院负责解释。</span>
+      </div>
+      <div class="appendix-item">
+        <span class="a-num">2、</span>
+        <span>招生各环节时间、地点若有调整，将通过计算机工程学院官方通知渠道另行公告，请持续关注。</span>
+      </div>
+      <div class="appendix-item">
+        <span class="a-num">3、</span>
+        <span>所有报名学生须保证提交材料真实有效，弄虚作假者一律取消报名及录取资格。</span>
+      </div>
+      <div class="appendix-item">
+        <span class="a-num">4、</span>
+        <span>产业学院课程学分置换方案以学校教务处最终核定结果为准。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer-info">
+    <div class="f-school">广州城市理工学院 · 人工智能产业学院</div>
+    <div>产教融合 · 赋能未来 · 智创湾区</div>
+    <div style="margin-top:8px;color:#bbb;">来源 | 人工智能产业学院招生工作组</div>
+  </div>
+
+</div>
+</body>
+</html>
